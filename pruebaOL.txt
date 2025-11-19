@@ -1,0 +1,32 @@
+// --- PRUEBA DE LOGICA BOOLEANA ---
+BOOLEANO tengoLlave = FALSO;
+BOOLEANO soyAdmin = VERDADERO;
+BOOLEANO sistemaActivo = VERDADERO;
+ENTERO nivelSeguridad = 5;
+
+IMPRIMIR("Verificando acceso al sistema Kobra...");
+
+// Caso 1: Operador O
+SI (tengoLlave == VERDADERO O soyAdmin == VERDADERO) {
+    IMPRIMIR("Acceso Basico: CONCEDIDO (Tienes llave O eres admin)");
+} SINO {
+    IMPRIMIR("Acceso Basico: DENEGADO");
+}
+
+// Caso 2: Operador Y con comparaciones numericas
+SI (soyAdmin == VERDADERO Y nivelSeguridad >= 5) {
+    IMPRIMIR("Acceso Nivel Alto: CONCEDIDO");
+}
+
+// Caso 3: Logica compleja con parentesis
+// (FALSO Y VERDADERO) O (VERDADERO Y VERDADERO) -> FALSO O VERDADERO -> VERDADERO
+SI ( (tengoLlave == VERDADERO Y sistemaActivo == FALSO) O (soyAdmin == VERDADERO Y sistemaActivo == VERDADERO) ) {
+    IMPRIMIR("Acceso de Emergencia: ACTIVADO");
+} SINO {
+    IMPRIMIR("Acceso de Emergencia: FALLIDO");
+}
+
+// Caso 4: Desigualdad
+SI (nivelSeguridad != 0) {
+    IMPRIMIR("El sistema tiene seguridad activa.");
+}

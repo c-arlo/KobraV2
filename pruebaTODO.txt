@@ -1,0 +1,46 @@
+// --- CALCULADORA DE CUENTA RESTAURANTE ---
+FLOTANTE costoComida = 450.50;
+FLOTANTE costoBebidas = 120.00;
+FLOTANTE tasaPropina = 0.15;
+ENTERO personas = 3;
+FLOTANTE total = 0.0;
+FLOTANTE propina = 0.0;
+FLOTANTE totalFinal = 0.0;
+FLOTANTE porPersona = 0.0;
+
+// Suma inicial
+total = costoComida + costoBebidas;
+
+IMPRIMIR("--- TICKET DE KOBRA RESTAURANT ---");
+IMPRIMIR("Subtotal comida y bebida:");
+IMPRIMIR(total);
+
+// Logica de propina alta si el consumo fue alto
+SI (total > 500.0) {
+    IMPRIMIR("Consumo alto detectado. Aplicando propina sugerida del 15%");
+    propina = total * tasaPropina;
+} SINO {
+    IMPRIMIR("Consumo estandar. Propina fija de 50 pesos.");
+    propina = 50.0;
+}
+
+totalFinal = total + propina;
+
+IMPRIMIR("Propina calculada:");
+IMPRIMIR(propina);
+IMPRIMIR("TOTAL A PAGAR:");
+IMPRIMIR(totalFinal);
+
+// Division Mixta: Flotante / Entero
+// Tu funcion _kobra_div debera usar '/' normal porque totalFinal es float.
+porPersona = totalFinal / personas;
+
+IMPRIMIR("Monto a pagar por persona:");
+IMPRIMIR(porPersona);
+
+// Ciclo final de despedida
+IMPRIMIR("Imprimiendo recibos individuales...");
+ENTERO i = 0;
+PARA (i = 0; i < personas; i = i + 1) {
+    IMPRIMIR("Recibo impreso.");
+}

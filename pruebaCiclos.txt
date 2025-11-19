@@ -1,0 +1,38 @@
+// --- PRUEBA DE CICLOS ---
+ENTERO contador = 5;
+ENTERO factorial = 1;
+ENTERO i = 1;
+ENTERO sumaPares = 0;
+ENTERO maximo = 10;
+
+IMPRIMIR("1. Cuenta regresiva con MIENTRAS:");
+
+MIENTRAS (contador > 0) {
+    IMPRIMIR(contador);
+    contador = contador - 1;
+}
+
+IMPRIMIR("2. Calculo de factorial y suma de pares con PARA:");
+
+// Iteramos del 1 al 10
+PARA (i = 1; i <= maximo; i = i + 1) {
+
+    // Calculamos factorial acumulativo (simulado para n pequeñito)
+    factorial = factorial * i;
+
+    // Detectamos pares usando tu truco de division entera
+    // Si (i / 2) * 2 es igual a i, es par.
+    ENTERO checkPar = (i / 2) * 2;
+
+    SI (checkPar == i) {
+        sumaPares = sumaPares + i;
+        IMPRIMIR("Numero par encontrado:");
+        IMPRIMIR(i);
+    }
+}
+
+IMPRIMIR("Resultados Finales:");
+IMPRIMIR("Factorial de 10 (aprox):");
+IMPRIMIR(factorial);
+IMPRIMIR("Suma de los numeros pares:");
+IMPRIMIR(sumaPares);

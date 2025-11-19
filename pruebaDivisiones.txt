@@ -1,0 +1,23 @@
+ENTERO a = 9;
+ENTERO b = 2;
+FLOTANTE x = 9.0;
+FLOTANTE y = 2.0;
+BOOLEANO check = VERDADERO;
+
+IMPRIMIR("--- PRUEBA DE DIVISION ---");
+
+// Deberia ser entera (9 // 2 = 4)
+IMPRIMIR("Division Entera (9/2):");
+IMPRIMIR(a / b);
+
+// Deberia ser flotante (9.0 / 2.0 = 4.5)
+IMPRIMIR("Division Flotante (9.0/2.0):");
+IMPRIMIR(x / y);
+
+// Mixta (9 / 2.0 = 4.5)
+IMPRIMIR("Division Mixta (9/2.0):");
+IMPRIMIR(a / y);
+
+SI (check == VERDADERO) {
+    IMPRIMIR("El booleano en español funciona!");
+}
