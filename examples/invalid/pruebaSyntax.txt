@@ -1,0 +1,4 @@
+// --- Errores sintacticos ---
+ENTERO a = "Hola";
+Entero b = 4;
+ENTERO c = 3

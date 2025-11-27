@@ -1,8 +1,5 @@
-import sys
-from antlr4 import *
-from KobraV2Lexer import KobraV2Lexer
-from KobraV2Parser import KobraV2Parser
-from KobraV2Visitor import KobraV2Visitor
+from src.parser.KobraV2Parser import KobraV2Parser
+from src.semantic.KobraV2Visitor import KobraV2Visitor
 
 
 class KobraToPythonVisitor(KobraV2Visitor):

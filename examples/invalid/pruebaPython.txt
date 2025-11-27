@@ -1,0 +1,4 @@
+// --- Instrucciones de otro lenguaje de programacion ---
+contador = 5
+print("Hola")
+print(contador + 100 * 2)

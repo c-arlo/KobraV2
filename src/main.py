@@ -1,8 +1,8 @@
 import sys
 from antlr4 import *
-from KobraV2Lexer import KobraV2Lexer
-from KobraV2Parser import KobraV2Parser
-from KobraCompiler import KobraToPythonVisitor
+from src.lexer.KobraV2Lexer import KobraV2Lexer
+from src.parser.KobraV2Parser import KobraV2Parser
+from src.semantic.KobraCompiler import KobraToPythonVisitor
 
 
 def main():
@@ -16,11 +16,17 @@ def main():
     # 1. Leer input
     input_stream = FileStream(input_file, encoding='utf-8')
 
-    # 2. Lexer
+    # 2. lexer
     lexer = KobraV2Lexer(input_stream)
     stream = CommonTokenStream(lexer)
 
-    # 3. Parser
+    stream.fill()
+    print("\n--- Tokens identificados ---")
+    for token in stream.tokens:
+        print(token.text)
+    print("\n")
+
+    # 3. parser
     parser = KobraV2Parser(stream)
     tree = parser.programa()  # 'programa' es la regla raiz
 

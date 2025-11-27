@@ -1,0 +1,4 @@
+// --- Concatenacion entre tipos de datos ---
+ENTERO x = 10;
+TEXTO mensaje = "Hola";
+ENTERO resultado = x + mensaje;
