@@ -1,9 +1,9 @@
 # Generated from KobraV2.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
-    from src.parser.KobraV2Parser import KobraV2Parser
+    from src.KobraV2Parser import KobraV2Parser
 else:
-    from src.parser.KobraV2Parser import KobraV2Parser
+    from src.KobraV2Parser import KobraV2Parser
 
 # This class defines a complete listener for a parse tree produced by KobraV2Parser.
 class KobraV2Listener(ParseTreeListener):

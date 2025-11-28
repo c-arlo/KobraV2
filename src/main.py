@@ -1,8 +1,8 @@
 import sys
 from antlr4 import *
-from src.lexer.KobraV2Lexer import KobraV2Lexer
-from src.parser.KobraV2Parser import KobraV2Parser
-from src.semantic.KobraCompiler import KobraToPythonVisitor
+from KobraV2Lexer import KobraV2Lexer
+from KobraV2Parser import KobraV2Parser
+from KobraCompiler import KobraToPythonVisitor
 
 
 def main():

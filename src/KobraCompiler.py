@@ -1,5 +1,5 @@
-from src.parser.KobraV2Parser import KobraV2Parser
-from src.semantic.KobraV2Visitor import KobraV2Visitor
+from KobraV2Visitor import KobraV2Visitor
+from KobraV2Parser import KobraV2Parser
 
 
 class KobraToPythonVisitor(KobraV2Visitor):

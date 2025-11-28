@@ -1,9 +1,9 @@
 # Generated from KobraV2.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
-    from src.parser.KobraV2Parser import KobraV2Parser
+    from KobraV2Parser import KobraV2Parser
 else:
-    from src.parser.KobraV2Parser import KobraV2Parser
+    from KobraV2Parser import KobraV2Parser
 
 # This class defines a complete generic visitor for a parse tree produced by KobraV2Parser.
 
