@@ -15,7 +15,26 @@ KobraV2 es un transpilador que convierte archivos escritos en el lenguaje origin
 - Granados Gallegos Carlo Sebastián - a2203330135
 
 ## Estructura del Proyecto
-[Descripción de la organización de directorios]
+docs/
+  • Manual técnico y de usuario
+examples/
+  expected/
+    • Archivos de salida de los ejemplos validos
+  invalid/
+    • Ejemplos de entrada CON errores
+  valid/
+    • Ejemplos de entrada SIN errores
+lib/
+  • Archivo fuente para antlr4
+src/
+  •	KobraV2.g4 – archivo de gramática del lenguaje.
+  •	KobraV2Lexer.py – archivo generado por ANTLR que define los tokens.
+  •	KobraV2Parser.py – parser generado a partir de la gramática.
+  •	KobraCompiler.py – módulo principal donde se implementa el visitor y generación de código.
+  •	main.py – archivo que ejecuta el proceso de transpilación.
+tests/
+  • Archivos autogenerados con Makefile
+•	Makefile – Script de construcción
 
 ## Requisitos y Dependencias
 [Software y librerías necesarias]
